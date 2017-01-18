@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Simple registration form">
+	<meta name="author" content="Tony Chen">
+	<script>
+		function setHidden() {
+			var today = new Date();
+			document.forms["regForm"]["timestamp"].value = today.getTime();
+		}
+		function validateForm() {
+			// Validate account name
+			var aname = document.forms["regForm"]["aname"].value;
+			if (!aname[0].match(/([a-z]|[A-Z])/) || !aname.match(/^\w+$/)) {
+				alert("Account name can only be upper or lower case letters and numbers, but may not start with a number");
+				return false;
+			}
+
+			// Validate email address
+			var email = document.forms["regForm"]["email"].value;
+			if (!email.match(/^[^@]+@[^@]+$/)) {
+				alert("Invalid email address");
+				return false;
+			}
+
+			// Validate phone number
+			var phone = document.forms["regForm"]["phone"].value;
+			if (phone.length !== 10 || !phone.match(/^\d{10}$/)) {
+				alert("Invalid phone number");
+				return false;
+			}
+
+			// Validate birthday
+			var bday = document.forms["regForm"]["bday"].value;
+			if (bday.length !== 10) {
+				alert("Invalid birthday");
+				return false;
+			}
+			var month = bday.substring(0,2);
+			var day = bday.substring(3,5);
+			var year = bday.substring(6,10);
+			if (!month.match(/^\d{2}$/) || !day.match(/^\d{2}$/) ||
+				!year.match(/^\d{4}$/) || bday[2] !== "/" || bday[5] !== "/") {
+				alert("Invalid birthday");
+				return false;
+			}
+			month = parseInt(month);
+			day = parseInt(day);
+			year = parseInt(year);
+			if (month < 1 || month > 12 || day < 1 || day > 31 || 
+				((month === 4 || month === 6 || month === 9 || month === 11) &&
+					day === 31) || (month === 2 && (day === 30 || 
+						((year % 4 !== 0 || (year % 100 === 0 &&
+							year % 400 !== 0)) && day === 29)))) {
+				alert("Invalid birthday");
+				return false;;
+			}
+			var today = new Date();
+			if (today.getFullYear() - year < 18 || (today.getFullYear() - year === 18 &&
+				(today.getMonth() + 1 < month || (today.getMonth() + 1 === month &&
+					today.getDate() < day)))) {
+				alert("User under 18 years old cannot register");
+				return false;
+			}
+
+			// Validate zipcode
+			var zip = document.forms["regForm"]["zip"].value;
+			if (zip.length !== 5 || !zip.match(/^\d{5}$/)) {
+				alert("Invalid zipcode");
+				return false;
+			}
+
+			// Validate password
+			if (document.forms["regForm"]["pw"].value.length === 0) {
+				alert("Password is required");
+				return false;
+			}
+			if (document.forms["regForm"]["pw"].value !== document.forms["regForm"]["pwc"].value) {
+				alert("Password inconsistent with password confirmation");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+	<body onload="setHidden()">
+		<form name="regForm" action="formProcessor.html" onsubmit="return validateForm()" method="GET">
+			Account Name: <input type="text" name="aname" required>
+			<br><br>
+			Display Name (optional): <input type="text" name="dname">
+			<br><br>
+			Email Address: <input type="email" name="email" required>
+			<br><br>
+			Phone Number: <input type="text" name="phone" maxlength="10" required>
+			<br><br>
+			Date of Birth (mm/dd/yyyy): <input type="date" name="bday" required>
+			<br><br>
+			Zipcode: <input type="text" name="zip" maxlength="5" required>
+			<br><br>
+			Password: <input type="password" name="pw" required>
+			<br><br>
+			Password Confirmation: <input type="password" name="pwc" required>
+			<br><br>
+			<input type="hidden" name="timestamp">
+			<input type="submit" name="submit" value="Submit">
+			<input type="reset" name="reset">
+		</form>
+	</body>
+</html>

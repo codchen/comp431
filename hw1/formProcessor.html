@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Registration form processor">
+	<meta name="author" content="Tony Chen">
+	<script>
+		function parseHidden(mili) {
+			var today = new Date(mili);
+			var dd = today.getDate();
+			if (dd < 10) {
+				dd = "0" + dd;
+			}
+			var mm = today.getMonth() + 1;
+			if (mm < 10) {
+				mm = "0" + mm;
+			}
+			var yyyy = today.getFullYear();
+			var hour = today.getHours();
+			var minutes = today.getMinutes();
+			var seconds = today.getSeconds();
+			return mm + "/" + dd + "/" + yyyy + " " + hour + ":" + minutes + ":" + seconds;
+		}
+		function onLoadHandler() {
+			var table = document.getElementById("table");
+			location.search.substr(1).split("&").forEach(
+				function (item) {
+					var tmp = item.split("=");
+					if (tmp[0] === "aname") {
+						table.rows[0].cells[1].innerHTML = decodeURIComponent(tmp[1]);
+					} else if (tmp[0] === "dname") {
+						table.rows[1].cells[1].innerHTML = decodeURIComponent(tmp[1]);
+					} else if (tmp[0] === "email") {
+						table.rows[2].cells[1].innerHTML = decodeURIComponent(tmp[1]);
+					} else if (tmp[0] === "phone") {
+						table.rows[3].cells[1].innerHTML = decodeURIComponent(tmp[1]);
+					} else if (tmp[0] === "bday") {
+						table.rows[4].cells[1].innerHTML = decodeURIComponent(tmp[1]);
+					} else if (tmp[0] === "zip") {
+						table.rows[5].cells[1].innerHTML = decodeURIComponent(tmp[1]);
+					} else if (tmp[0] === "pw") {
+						table.rows[6].cells[1].innerHTML = decodeURIComponent(tmp[1]);
+					} else if (tmp[0] === "pwc") {
+						table.rows[7].cells[1].innerHTML = decodeURIComponent(tmp[1]);
+					} else if (tmp[0] === "timestamp") {
+						table.rows[8].cells[1].innerHTML = parseHidden(parseInt(decodeURIComponent(tmp[1])));
+					}
+				});
+		}
+	</script>
+</head>
+<body onload="onLoadHandler()">
+<table id="table">
+	<tr>
+		<td>Account Name</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Display Name</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Email Address</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Phone Number</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Date of Birth</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Zipcode</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Password Confirmation</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Submitted Time</td>
+		<td></td>
+	</tr>
+</table>
+</body>
+</html>
