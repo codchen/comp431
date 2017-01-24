@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="App main page">
+	<meta name="author" content="Tony Chen">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Indie+Flower|VT323|Overpass">
+	<script src="profile.js"></script>
+</head>
+<body onload="onLoadHandler()">
+	<nav>
+		<span class="title">My Profile</span>
+		<br>
+		<a href="main.html">Main Page</a>
+	</nav>
+	<br><br>
+	<table id="table" align="center">
+		<tr>
+			<td class="cell c1">
+				<div class="txtcontainer profile key">
+					Display Name
+				</div>
+			</td>
+			<td class="cell c2">
+				<div class="txtcontainer profile value">
+					Alan Turing
+				</div>
+			</td>
+			<td class="cell c3">
+				<div class="txtcontainer profile">
+					<textarea rows="1">Click to enter a new one</textarea>
+				</div>
+			</td>
+			<td class="cell c4">
+				<span class="msg"></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="cell c1">
+				<div class="txtcontainer profile key">
+					Email Address
+				</div>
+			</td>
+			<td class="cell c2">
+				<div class="txtcontainer profile value">
+					alan.turing@acm.org
+				</div>
+			</td>
+			<td class="cell c3">
+				<div class="txtcontainer profile">
+					<textarea rows="1">Click to enter a new one</textarea>
+				</div>
+			</td>
+			<td class="cell c4">
+				<span class="msg"></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="cell c1">
+				<div class="txtcontainer profile key">
+					Phone Number
+				</div>
+			</td>
+			<td class="cell c2">
+				<div class="txtcontainer profile value">
+					3141592654
+				</div>
+			</td>
+			<td class="cell c3">
+				<div class="txtcontainer profile">
+					<textarea rows="1">Click to enter a new one</textarea>
+				</div>
+			</td>
+			<td class="cell c4">
+				<span class="msg"></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="cell c1">
+				<div class="txtcontainer profile key">
+					Zipcode
+				</div>
+			</td>
+			<td class="cell c2">
+				<div class="txtcontainer profile value">
+					77005
+				</div>
+			</td>
+			<td class="cell c3">
+				<div class="txtcontainer profile">
+					<textarea rows="1">Click to enter a new one</textarea>
+				</div>
+			</td>
+			<td class="cell c4">
+				<span class="msg"></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="cell c1">
+				<div class="txtcontainer profile key">
+					Password
+				</div>
+			</td>
+			<td class="cell c2">
+				<div class="txtcontainer profile value">
+					strongAI
+				</div>
+			</td>
+			<td class="cell c3">
+				<div class="txtcontainer profile">
+					<textarea rows="1">Click to enter a new one</textarea>
+				</div>
+			</td>
+			<td class="cell c4">
+				<span class="msg"></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="cell c1">
+				<div class="txtcontainer profile key">
+					Password Confirmation
+				</div>
+			</td>
+			<td class="cell c2">
+				<div class="txtcontainer profile value">
+					strongAI
+				</div>
+			</td>
+			<td class="cell c3">
+				<div class="txtcontainer profile">
+					<textarea rows="1">Click to enter a new one</textarea>
+				</div>
+			</td>
+			<td class="cell c4">
+				<span class="msg"></span>
+			</td>
+		</tr>
+	</table>
+	<br><br>
+	<div class="btnwrapper">
+		<button id="updatebtn" disabled>Update</button>
+	</div>
+</body>
+</html>

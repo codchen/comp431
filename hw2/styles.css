@@ -1,0 +1,174 @@
+.card {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 450px;
+	width: 450px;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.card:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+
+.txtcontainer {
+	border-radius: 10px;
+	padding: 6px 24px;
+	color: #333333;
+	background-color: white;
+	font-family: "Geneva";
+}
+
+.txtcontainer.profile {
+	font-size: 24px;
+}
+
+.txtcontainer.profile.key {
+	text-align: left;
+	font-weight: bold;
+	font-family: "VT323", monospace;
+	background-color: #ffe6e6;
+	color: #00aaff;
+	font-size: 32px;
+}
+
+.txtcontainer.profile.value {
+	text-align: center;
+}
+
+.btn {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: none;
+}
+
+#updatebtn {
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: none;
+}
+
+#updatebtn[disabled] {
+	background-color: #a6a6a6;
+}
+
+#updatebtn:active {
+	background-color: #00802b;
+}
+
+.btnwrapper {
+	text-align: center;
+}
+
+.title {
+	text-align: center;
+	color: #452F74;
+	font-size: 64px;
+	font-weight: bold;
+	font-family: "Indie Flower", cursive;
+}
+
+.cell {
+	border-radius: 10px;
+}
+
+.cell.c1 {
+	width: 180px;
+}
+
+.cell.c2 {
+	width: 300px;
+}
+
+.cell.c3 {
+	width: 300px;
+}
+
+.cell.c4 {
+	width: 300px;
+}
+
+#table {
+	table-layout: fixed;
+	width: 1080px;
+}
+
+.msg {
+	color: red;
+	font-family: "Overpass", sans-serif;
+	font-size: 18px;
+}
+
+nav {
+	text-align: center;
+	background-color: #e6ccff;
+	padding: 6px;
+	border-radius: 20px;
+}
+
+p {
+	font-style: italic;
+}
+
+h2 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-weight: bold;
+	color: black;
+}
+
+td {
+	position: relative;
+}
+
+a {
+	border-radius: 10px;
+	font-family: "Indie Flower", cursive;
+}
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 9px 16px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+
+body {
+	background-color: #ffe6e6;
+}
+
+textarea {
+	border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+	font-size: 24px;
+	width: 100%;
+	color: #cccccc;
+	vertical-align:middle;
+}
