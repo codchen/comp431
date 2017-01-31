@@ -1,21 +1,70 @@
-.circle {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 30px;
-	height: 30px;
-	border-radius: 15px;
-	background-color: red;
-}
-
-.frame {
-    margin: 100px auto;
-    width: 35%;
-	height: 600px;
-	background-color: green;
-}
-
 #view {
-	margin: 0px 450px;
+	margin: 0px auto;
 	border:1px solid #000000;
+}
+
+#control {
+	width: 300px;
+	padding: 0px 20px;
+}
+
+#canvas {
+	position: relative;
+}
+
+#stat {
+	width: 400px;
+	padding: 0px 20px;
+}
+
+#start {
+	font-family: 'Amatic SC', cursive;
+	font-size: 36px;
+}
+
+#left {
+	background: url(img/arrow_left.png) no-repeat;
+    cursor:pointer;
+    border: none;
+    outline: none;
+}
+
+#right {
+	background: url(img/arrow_right.png) no-repeat;
+    cursor:pointer;
+    border: none;
+    outline: none;
+}
+
+#left[disabled] {
+	background: url(img/arrow_left_disable.png) no-repeat;
+}
+
+#right[disabled] {
+	background: url(img/arrow_right_disable.png) no-repeat;
+}
+
+#title {
+	font-family: 'Barrio', cursive;
+	font-size: 56px;
+	text-align: center;
+}
+
+#lost {
+	font-family: 'Indie Flower', cursive;
+	font-size: 36px;
+	color: white;
+}
+
+.stat {
+	font-family: 'Bahiana', cursive;
+	font-size: 30px;
+}
+
+table.main {
+	table-layout: fixed;
+}
+
+table.main td {
+	overflow: hidden;
 }

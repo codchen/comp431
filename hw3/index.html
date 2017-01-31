@@ -6,10 +6,52 @@
 		<meta name="author" content="Tony Chen">
 		<script src="main.js"></script>
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Bahiana|Barrio|Indie+Flower|Amatic+SC" rel="stylesheet">
 	</head>
 	<body>
-		<button id="left">Left</button>
-		<button id="right">Right</button>
-		<canvas id="view"></canvas>
+		<table class="main">
+			<tr>
+				<td id="control">
+					<h1 id="title">Doodle Dive</h1>
+					<br><br>
+					<button id="start" class="btn btn-primary btn-lg btn-block">Start</button>
+				</td>
+				<td id="canvas">
+					<canvas id="view"></canvas>
+					<button id="left" disabled></button>
+					<button id="right" disabled></button>
+				</td>
+				<td id="stat">
+					<table>
+						<tr>
+							<td class="stat">Score:&nbsp&nbsp&nbsp</td>
+							<td class="stat" id="score"></td>
+						</tr>
+						<tr>
+							<td class="stat">Dangers Dodged:&nbsp&nbsp&nbsp</td>
+							<td class="stat" id="enemy"></td>
+						</tr>
+						<tr>
+							<td class="stat">Highest Score:&nbsp&nbsp&nbsp</td>
+							<td class="stat" id="high score"></td>
+						</tr>
+						<tr>
+							<td class="stat">Highest Dangers Dodged:&nbsp&nbsp&nbsp</td>
+							<td class="stat" id="high enemy"></td>
+						</tr>
+						<tr>
+							<td class="stat">CTR:&nbsp&nbsp&nbsp</td>
+							<td class="stat" id="ctr"></td>
+						</tr>
+						<tr>
+							<td class="stat">Number of Games Played:&nbsp&nbsp&nbsp</td>
+							<td class="stat" id="num"></td>
+						</tr>
+					</table>
+					<div id="lost">You lost...Start again!</div>
+				</td>
+			</tr>
+		</table>
 	</body>
 </html>
