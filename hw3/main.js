@@ -10,117 +10,151 @@ const MINLEN = 50;
 const MINTOP = 100;
 const MAXTOP = 150;
 
-var player;
+let player;
 
-var pflen;
-var btom;
-var tp;
+let pflen;
+let btom;
+let tp;
 
-var goodPf;
-var badPf;
+let goodPf;
+let badPf;
 
-var status;
-var stat;
+let status;
+let stat;
 
-var playerImg = new Image();
-var playerImgR = new Image();
-var goodPfImg = new Image();
-var badPfImg = new Image();
+let playerImg;
+let playerImgR;
+let goodPfImg;
+let badPfImg;
 
 window.onload = function() {
+	initImages();
+	initStats();
+	initCanvas();
+	initBtns();
+}
+
+let initImages = function() {
+	playerImg = new Image();
+	playerImgR = new Image();
+	goodPfImg = new Image();
+	badPfImg = new Image();
 	playerImg.src = "img/owl.jpg";
 	playerImgR.src = "img/owl_r.jpeg";
 	goodPfImg.src = "img/safe.png";
 	badPfImg.src = "img/dangerous.png";
-
-	readStat();
-	var canvas = document.getElementById("view");
-	canvas.setAttribute("width",WIDTH);
-	canvas.setAttribute("height",HEIGHT);
-	var leftBtn = document.getElementById("left");
-	var rightBtn = document.getElementById("right");
-	leftBtn.style.position = 'absolute';
-	rightBtn.style.position = 'absolute';
-	leftBtn.style.width = (WIDTH / 5) + 'px';
-	rightBtn.style.width = (WIDTH / 5) + 'px';
-	leftBtn.style.height = (HEIGHT / 10) + 'px';
-	rightBtn.style.height = (HEIGHT / 10) + 'px';
-	leftBtn.style.left = (WIDTH / 2 - WIDTH / 5) + 'px';
-	leftBtn.style.top = (HEIGHT - HEIGHT / 10) + 'px';
-	rightBtn.style.left = (WIDTH / 2) + 'px';
-	rightBtn.style.top = (HEIGHT - HEIGHT / 10) + 'px';
-	leftBtn.style.backgroundPosition = 'center';
-	rightBtn.style.backgroundPosition = 'center';
-	leftBtn.addEventListener("mousedown", function() {
-		player.vx = -2;
-		player.toLeft = true;
-	});
-	leftBtn.addEventListener("mouseup", function() {
-		player.vx = 0;
-	});
-	leftBtn.addEventListener("mouseleave", function() {
-		player.vx = 0;
-	});
-	rightBtn.addEventListener("mousedown", function() {
-		player.vx = 2;
-		player.toLeft = false;
-	});
-	rightBtn.addEventListener("mouseup", function() {
-		player.vx = 0;
-	});
-	rightBtn.addEventListener("mouseleave", function() {
-		player.vx = 0;
-	});
-	var startBtn = document.getElementById("start");
-	startBtn.addEventListener("click", function() {
-		startGame();
-		startBtn.disabled = true;
-	});
 }
 
-var readStat = function() {
+// Initialize statistics shown on the page by retrieving from local cache
+// or setting to default value if cache is disabled
+let initStats = function() {
+	const items = ["highScore", "highEnemy", "num"];
 	if (window.localStorage) {
-		var highScore = localStorage.getItem("highScore");
-		if (highScore) {
-			document.getElementById("high score").innerHTML = highScore;
-		} else {
-			document.getElementById("high score").innerHTML = 0;
-		}
-		var highEnemy = localStorage.getItem("highEnemy");
-		if (highEnemy) {
-			document.getElementById("high enemy").innerHTML = highEnemy;
-		} else {
-			document.getElementById("high enemy").innerHTML = 0;
-		}
-		var ctr = localStorage.getItem("ctr");
+		items.forEach(item => {
+			let cached = localStorage.getItem(item);
+			document.getElementById(item).innerHTML = cached ? cached : 0;
+		});
+		// Handled separately since CTR needs to be updated upon loading
+		let ctr = localStorage.getItem("ctr");
 		if (ctr) {
 			localStorage.setItem("ctr", parseInt(ctr) + 1);
 		} else {
 			localStorage.setItem("ctr", "1");
 		}
 		document.getElementById("ctr").innerHTML = localStorage.getItem("ctr");
-		var num = localStorage.getItem("num");
-		if (num) {
-			document.getElementById("num").innerHTML = num;
-		} else {
-			document.getElementById("num").innerHTML = 0;
-		}
 	} else {
-		document.getElementById("high score").innerHTML = 0;
-		document.getElementById("high enemy").innerHTML = 0;
+		items.forEach(item => {
+			document.getElementById(item).innerHTML = 0;
+		});
 		document.getElementById("ctr").innerHTML = 1;
-		document.getElementById("num").innerHTML = 0;
 	}
 }
 
-var startGame = function() {
-	document.getElementById("num").innerHTML = parseInt(document.getElementById("num").innerHTML) + 1;
-	if (window.localStorage) {
-		localStorage.setItem("num", document.getElementById("num").innerHTML);
+let initCanvas = function() {
+	let canvas = document.getElementById("view");
+	canvas.setAttribute("width",WIDTH);
+	canvas.setAttribute("height",HEIGHT);
+}
+
+// Called by onload(). Set styles and handlers for all the buttons
+let initBtns = function() {
+	let initControl = function(left) {
+		let btn = document.getElementById(left ? "left" : "right");
+		btn.style.position = "absolute";
+		btn.style.width = (WIDTH / 5) + "px";
+		btn.style.height = (HEIGHT / 10) + "px";
+		btn.style.left = (WIDTH / 2 - (left ? WIDTH / 5 : 0)) + "px";
+		btn.style.top = (HEIGHT - HEIGHT / 10) + "px";
+		btn.style.backgroundPosition = "center";
+		btn.addEventListener("mousedown", function() {
+			player.vx = left ? -2 : 2;
+			player.toLeft = left;
+		});
+		btn.addEventListener("mouseup", function () {
+			player.vx = 0;
+		});
+		btn.addEventListener("mouseleave", function() {
+			player.vx = 0;
+		});
 	}
-	document.getElementById("left").disabled = false;
-	document.getElementById("right").disabled = false;
-	document.getElementById("lost").style.color = "white";
+	initControl(true);
+	initControl(false);
+	let startBtn = document.getElementById("start");
+	startBtn.addEventListener("click", function() {
+		startGame();
+		startBtn.disabled = true;
+	});
+}
+
+// Update the DOM corresponding to different state
+let updateDom = function(state) {
+	if (state === "start") {
+		let newNum = parseInt(document.getElementById("num").innerHTML) + 1;
+		document.getElementById("num").innerHTML = newNum;
+		if (window.localStorage) {
+			localStorage.setItem("num", newNum);
+		}
+		document.getElementById("left").disabled = false;
+		document.getElementById("right").disabled = false;
+		document.getElementById("lost").style.color = "white";
+	} else if (state === "lost") {
+		document.getElementById("start").disabled = false;
+		document.getElementById("left").disabled = true;
+		document.getElementById("right").disabled = true;
+		document.getElementById("lost").style.color = "red";
+	} else if (state === "in game") {
+		stat.score = Math.floor(stat.score + player.vy);
+		document.getElementById("score").innerHTML = stat.score;
+		document.getElementById("enemy").innerHTML = stat.enemy;
+		if (window.localStorage) {
+			if (!localStorage.getItem("highScore") ||
+				stat.score > parseInt(localStorage.getItem("highScore"))) {
+				document.getElementById("highScore").innerHTML = stat.score;
+				localStorage.setItem("highScore", stat.score);
+			}
+			if (!localStorage.getItem("highEnemy") ||
+				stat.enemy > parseInt(localStorage.getItem("highEnemy"))) {
+				document.getElementById("highEnemy").innerHTML = stat.enemy;
+				localStorage.setItem("highEnemy", stat.enemy);
+			}
+		} else {
+			if (stat.score >
+				parseInt(document.getElementById("highScore").innerHTML)) {
+				document.getElementById("highScore").innerHTML = stat.score;
+			}
+			if (stat.enemy >
+				parseInt(document.getElementById("highEnemy").innerHTML)) {
+				document.getElementById("highEnemy").innerHTML = stat.enemy;
+			}
+		}
+	}
+}
+
+// Initialize a new game and start updating/animation
+let startGame = function() {
+	updateDom("start");
+
+	// Initialize global variables
 	player = {
 		x: 250,
 		y: 250,
@@ -146,51 +180,49 @@ var startGame = function() {
 		y: player.y + player.radius
 	};
 
-	spawn();
+	spawnPfs();
 
 	draw();
 	window.requestAnimationFrame(update);
 }
 
-var toSpawn = function() {
-	var current;
-	if (badPf.length === 0) {
-		current = goodPf[goodPf.length - 1].y;
-	} else {
-		current = Math.max(goodPf[goodPf.length - 1].y, badPf[badPf.length - 1].y);
+// Spawn new platforms as long as there is room in the bottom
+// Dangerous plarform will be spawned 1 out 4 times on average
+let spawnPfs = function() {
+	// Get the next height to spawn platform
+	let toSpawn = function() {
+		let current = goodPf[goodPf.length - 1].y;
+		if (badPf.length !== 0) {
+			current = Math.max(current, badPf[badPf.length - 1].y);
+		}
+		return Math.floor(Math.random() * (btom - tp)) + tp + current;
 	}
-	return Math.floor(Math.random() * (btom - tp)) + tp + current;
-}
-
-var spawn = function() {
-	var nextpfy = toSpawn();
+	let nextpfy = toSpawn();
+	// Given height, spawn a platform at a random horizontal position
+	let spawn = function(pf) {
+		pf[pf.length] = {
+			len: pflen,
+			x: Math.floor(Math.random() * (WIDTH - pflen)),
+			y: nextpfy
+		};
+	}
 	while (nextpfy < HEIGHT) {
 		if (Math.floor(Math.random() * 4) === 0) {
-			badPf[badPf.length] = {
-				len: pflen,
-				x: Math.floor(Math.random() * (WIDTH - pflen)),
-				y: nextpfy
-			};
+			spawn(badPf);
 		} else {
-			goodPf[goodPf.length] = {
-				len: pflen,
-				x: Math.floor(Math.random() * (WIDTH - pflen)),
-				y: nextpfy
-			};
+			spawn(goodPf);
 		}
 		nextpfy = toSpawn();
 	}
 }
 
-var draw = function() {
+// Draw the canvas to reflect the updates to the user
+let draw = function() {
 	var ctx = document.getElementById("view").getContext("2d");
 	ctx.clearRect(0,0,WIDTH,HEIGHT);
-
-	if (player.toLeft) {
-		ctx.drawImage(playerImg, player.x - player.radius, player.y - player.radius, 2 * player.radius, 2 * player.radius);
-	} else {
-		ctx.drawImage(playerImgR, player.x - player.radius, player.y - player.radius, 2 * player.radius, 2 * player.radius);
-	}
+	ctx.drawImage(player.toLeft ? playerImg : playerImgR,
+		player.x - player.radius, player.y - player.radius,
+		2 * player.radius, 2 * player.radius);
 
 	goodPf.forEach(function(pf) {
 		ctx.drawImage(goodPfImg, pf.x, pf.y, pf.len, PFHEIGHT);
@@ -201,30 +233,21 @@ var draw = function() {
 	});
 
 	if (status !== "IN GAME") {
-		document.getElementById("start").disabled = false;
-		document.getElementById("left").disabled = true;
-		document.getElementById("right").disabled = true;
-		document.getElementById("lost").style.color = "red";
+		updateDom("lost");
 		return;
 	}
 
 	window.requestAnimationFrame(update);
 }
 
-var landed = function(pf) {
-	return player.x >= pf.x - player.radius / 2 &&
-		player.x <= pf.x + player.radius / 2 + pf.len &&
-		pf.y === player.y + player.radius;
-}
-
-var closeTo = function(pf, oldY) {
-	return oldY <= pf.y - player.radius && player.y >= pf.y - player.radius &&
-		player.x >= pf.x - player.radius / 2 &&
-		player.x <= pf.x + + player.radius / 2 + pf.len;
-}
-
-var update = function() {
-	var onGood = false;
+// Called by update(). Responsible for updating platform-related information
+// Check if the player is landed on a safe platform and return this information
+let updatePfs = function() {
+	// Helper function to check if a pf has player landed on
+	let landed = pf => player.x >= pf.x - player.radius / 2 &&
+			player.x <= pf.x + player.radius / 2 + pf.len &&
+			pf.y === player.y + player.radius;
+	let onGood = false;
 	goodPf.forEach(function(pf) {
 		if (landed(pf)) {
 			onGood = true;
@@ -239,6 +262,7 @@ var update = function() {
 		pf.y = pf.y - VSCROLL;
 	});
 
+	// Delete platforms that move pass the top boundary
 	while (goodPf.length > 0 && goodPf[0].y <= 0) {
 		goodPf.shift();
 	}
@@ -247,14 +271,14 @@ var update = function() {
 		stat.enemy = stat.enemy + 1;
 	}
 
-	spawn();
+	spawnPfs();
 
-	if (!onGood) {
-		player.vy = player.vy + 0.1;
-	} else {
-		player.vy = 0;
-	}
+	return onGood;
+}
 
+// Called by update(). Responsible for updating player-related information
+let updatePlayer = function(onGood) {
+	player.vy = onGood ? 0 : player.vy + 0.1;
 	player.x = player.x + player.vx;
 	if (player.x < player.radius) {
 		player.x = player.radius;
@@ -265,33 +289,11 @@ var update = function() {
 	var oldY = player.y - VSCROLL;
 	player.y = player.y + player.vy - VSCROLL;
 
-	stat.score = Math.floor(stat.score + player.vy);
-	document.getElementById("score").innerHTML = stat.score;
-	document.getElementById("enemy").innerHTML = stat.enemy;
-	if (window.localStorage) {
-		if (!localStorage.getItem("highScore") || stat.score > parseInt(localStorage.getItem("highScore"))) {
-			document.getElementById("high score").innerHTML = stat.score;
-			localStorage.setItem("highScore", stat.score);
-		}
-		if (!localStorage.getItem("highEnemy") || stat.enemy > parseInt(localStorage.getItem("highEnemy"))) {
-			document.getElementById("high enemy").innerHTML = stat.enemy;
-			localStorage.setItem("highEnemy", stat.enemy);
-		}
-	} else {
-		if (stat.score > parseInt(document.getElementById("high score").innerHTML)) {
-			document.getElementById("high score").innerHTML = stat.score;
-		}
-		if (stat.enemy > parseInt(document.getElementById("high enemy").innerHTML)) {
-			document.getElementById("high enemy").innerHTML = stat.enemy;
-		}
-	}
-
-	if (pflen > MINLEN) {
-		pflen = MAXLEN - stat.score / 100;
-	}
-	if (tp < MAXTOP) {
-		tp = MINTOP + stat.score / 100;
-	}
+	// Helper function to check if player will move across a platform on the
+	// next update. If so, consider the player as landed.
+	let closeTo = (pf, oldY) => oldY <= pf.y - player.radius && player.y >=
+			pf.y - player.radius && player.x >= pf.x - player.radius / 2 &&
+			player.x <= pf.x + + player.radius / 2 + pf.len;
 
 	goodPf.forEach(function(pf) {
 		if (closeTo(pf, oldY)) {
@@ -306,6 +308,21 @@ var update = function() {
 
 	if (player.y <= player.radius || player.y >= HEIGHT - player.radius) {
 		status = "LOST";
+	}
+}
+
+// The main update function
+let update = function() {
+	let onGood = updatePfs();
+	updatePlayer(onGood);
+	updateDom("in game");
+
+	// Increase difficulty as the player descends further
+	if (pflen > MINLEN) {
+		pflen = MAXLEN - stat.score / 100;
+	}
+	if (tp < MAXTOP) {
+		tp = MINTOP + stat.score / 100;
 	}
 
 	draw();

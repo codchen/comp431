@@ -62,7 +62,6 @@
     function countWordsSafe(url) {
         // IMPLEMENT ME
         return countWords(url)
-            .then(res => res)
             .catch(err => {
                 console.error(`Error inside countWordsSafe: ${err.message}`);
                 return {}
