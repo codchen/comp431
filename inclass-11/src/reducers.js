@@ -37,14 +37,18 @@ const Reducer = (state =  {
 		case 'REMOVE_TODO':
 			return {
 				nextId: state.nextId,
-				todoItems: state.todoItems.filter((item) => item.id != action.id)
+				todoItems: state.todoItems.filter((item) => item.id !== action.id)
 			}
 			// IMPLEMENT ME
 		case 'TOGGLE_TODO':
 			return {
 				nextId: state.nextId,
 				todoItems: state.todoItems.map((item) => {
-					return {id: item.id, text: item.text, done: !item.done}
+					if (item.id === action.id) {
+						return {id: item.id, text: item.text, done: !item.done}
+					} else {
+						return item
+					}
 				})
 			}
 			// IMPLEMENT ME
