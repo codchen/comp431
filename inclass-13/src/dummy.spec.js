@@ -101,7 +101,7 @@ describe('Validate login', () => {
                 headline: { username: 'user', headline: newHeadline }
             }
         })
-        updateHeadline('newHeadline')
+        updateHeadline(newHeadline)
             .then(_ => {
                 expect(div.innerHTML).to.eql(`you are logged in as user "${newHeadline}"`)
             })
