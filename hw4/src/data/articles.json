@@ -1,0 +1,54 @@
+{
+	"articles": [
+		{"articleID": 0,
+		 "author": "Bob",
+		 "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate",
+		 "date": "2015-05-23T14:25:13.715Z",
+		 "image": "sample1"
+		},
+		{"articleID": 1,
+		 "author": "Alice",
+		 "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui",
+		 "date": "2013-12-01T09:49:22.219Z",
+		 "image": ""
+		},
+		{"articleID": 2,
+		 "author": "Charles",
+		 "text": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects,",
+		 "date": "2014-07-20T19:10:58.494Z",
+		 "image": "sample2"
+		},
+		{"articleID": 3,
+		 "author": "Denny",
+		 "text": "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa",
+		 "date": "2015-02-14T15:28:19.252Z",
+		 "image": ""
+		},
+		{"articleID": 4,
+		 "author": "Elizabeth",
+		 "text": "The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one",
+		 "date": "2016-03-03T00:14:52.900Z",
+		 "image": "sample3"
+		},
+		{"articleID": 5,
+		 "author": "Frank",
+		 "text": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary",
+		 "date": "2015-04-23T20:39:24.278Z",
+		 "image": ""
+		},
+		{"articleID": 6,
+		 "author": "George",
+		 "text": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my",
+		 "date": "2015-12-24T23:55:59.006Z",
+		 "image": "sample4"
+		},
+		{"articleID": 7,
+		 "author": "Henry",
+		 "text": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The",
+		 "date": "2016-01-19T18:40:25.787Z",
+		 "image": ""
+		}
+	],
+	"filter": "SHOW_ALL",
+	"keyword": ""
+}

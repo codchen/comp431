@@ -1,0 +1,6 @@
+node_modules
+.eslintcache
+dist
+!dist/index.html
+.git
+src/data/img

@@ -1,0 +1,73 @@
+.btn {
+	width: 80%;
+	margin: 0;
+}
+
+.btnNav {
+	float: right !important;
+	height: 3rem !important;
+	margin-right: 2rem !important;
+	margin-top: 3rem !important;
+}
+
+.inlineImg {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	margin-left: 2rem;
+	display: inline;
+	width: 15rem;
+}
+
+.landingBackground {
+	padding: 0;
+	background-color: #B7BFFF;
+}
+
+.authenticationBlock {
+	text-align: center;
+	padding-right: 7rem;
+	padding-bottom: 5rem;
+}
+
+.authenticationInput {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: 80%;
+}
+
+.errorMsgReg {
+	margin-top: 7rem !important;
+}
+
+.bullets {
+	float: right;
+	padding-top: 5rem;
+	padding-bottom: 12rem;
+}
+
+.nav {
+	background-color: #B7BFFF;
+	height: 9rem;
+}
+
+.file-input-label {
+	cursor: pointer;
+}
+
+.mid-column {
+	padding-top: 1rem !important;
+}
+
+.left-column {
+	padding-top: 1rem !important;
+	padding-left: 3rem !important;
+}
+
+.right-column {
+	padding-top: 1rem !important;
+	padding-right: 3rem !important;
+}
+
+#file {
+	display: none;
+}

@@ -1,0 +1,19 @@
+{
+	"followers": [
+		{
+			"username": "Alice",
+			"headline": "Feels good today",
+			"image": "dummy3"
+		},
+		{
+			"username": "Bob",
+			"headline": "Errrrrrrr",
+			"image": "dummy1"
+		},
+		{
+			"username": "Charles",
+			"headline": "React is great!",
+			"image": "dummy2"
+		}
+	]
+}
