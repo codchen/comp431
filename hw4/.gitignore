@@ -1,6 +1,7 @@
 node_modules
 .eslintcache
-dist
-!dist/index.html
+dist/*.jpg
+dist/*.png
+dist/bundle.js
 .git
 src/data/img
