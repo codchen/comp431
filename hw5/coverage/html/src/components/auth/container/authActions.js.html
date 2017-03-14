@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/auth/container/authActions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">src/components/auth/container</a> authActions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>68/68</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>25/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>55/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span></td><td class="text"><pre class="prettyprint lang-js">import { resource } from '../../../utils/ajax'
+import validate, { errors } from '../../../utils/validations'
+&nbsp;
+import { toMain, toLanding, updateErrorMessage, updateSuccessMessage }
+	from '../../../actions'
+import { setAllArticles } from '../../article/container/articleActions'
+import { setAllFollowing } from '../../main/container/followingActions'
+import { setInitialHome } from '../../main/container/homeActions'
+import { setInitialProfile } from '../../profile/container/profileActions'
+&nbsp;
+export const Action = {
+	REG: 'REG',
+	LOGIN: 'LOGIN',
+	LOGOUT: 'LOGOUT',
+	LOGIN_LOADING: 'LOGIN_LOADING',
+	REG_LOADING: 'REG_LOADING'
+}
+&nbsp;
+// Synchronous action creators
+export const registerAction = (username) =&gt; ({ type: Action.REG, username })
+export const loginAction = (username) =&gt; ({ type: Action.LOGIN, username })
+export const logoutAction = () =&gt; ({ type: Action.LOGOUT })
+export const loginRequested = () =&gt; ({ type: Action.LOGIN_LOADING,
+										loading: true })
+export const loginReceived = () =&gt; ({ type: Action.LOGIN_LOADING,
+										loading: false })
+export const registerRequested = () =&gt; ({ type: Action.REG_LOADING,
+										loading: true })
+export const registerReceived = () =&gt; ({ type: Action.REG_LOADING,
+										loading: false })
+&nbsp;
+// Async action creators
+export const register = (userInfo) =&gt; {
+	// register validation
+	let message
+	const validationError = Object.keys(errors).some((type) =&gt; {
+		if (!validate(type, userInfo)) {
+			message = updateErrorMessage(errors[type])
+			return true
+		}
+		return false
+	})
+	// dispatch an error message if validation failed
+	if (validationError) {
+		return message
+	}
+&nbsp;
+	// register
+	return (dispatch) =&gt; {
+		dispatch(registerRequested())
+		return postRegister(userInfo)
+			.then((username) =&gt; {
+				dispatch(registerReceived())
+				dispatch(updateSuccessMessage(
+					`Registration Successful for ${username}`))
+				dispatch(registerAction(username))
+			})
+			.catch((reason) =&gt; {
+				dispatch(registerReceived())
+				dispatch(updateErrorMessage(
+					`Registration failed: ${reason.message}`))
+			})
+	}
+}
+&nbsp;
+export const login = (username, password) =&gt; (dispatch) =&gt; {
+	dispatch(loginRequested())
+	return postLogin(username, password)
+		.then((username) =&gt; {
+			dispatch(loginReceived())
+			dispatch(updateSuccessMessage(`Login Successful as ${username}`))
+			dispatch(toMain())
+			// Initial fetch of user profile, article feeds, and followed users
+			dispatch(setAllArticles())
+			dispatch(setAllFollowing())
+			dispatch(setInitialHome())
+			dispatch(setInitialProfile())
+			// Actual login
+			dispatch(loginAction(username))
+		})
+		.catch((reason) =&gt; {
+			dispatch(loginReceived())
+			dispatch(updateErrorMessage(`Login failed: ${reason.message}`))
+		})
+}
+&nbsp;
+export const logout = () =&gt; (dispatch) =&gt;
+	putLogout().
+		then((_) =&gt; {
+			dispatch(updateSuccessMessage('Logout successful'))
+			dispatch(toLanding())
+			dispatch(logoutAction())
+		})
+		.catch((reason) =&gt; dispatch(updateErrorMessage(
+			`Logout failed: ${reason.message}`)))
+&nbsp;
+// Async requests
+const postRegister = (userInfo) =&gt;
+	resource('POST', 'register', userInfo)
+		.then((response) =&gt; response.username)
+const postLogin = (username, password) =&gt;
+	resource('POST', 'login', { username, password })
+		.then((response) =&gt; response.username)
+const putLogout = () =&gt; resource('PUT', 'logout')</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Mar 14 2017 13:10:10 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

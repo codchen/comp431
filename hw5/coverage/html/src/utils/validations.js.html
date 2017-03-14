@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/utils/validations.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/utils</a> validations.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20.59% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">23.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/30</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// This file contains all validation functions
+export const errors = {
+	username: 'Username must start with a letter and only contain ' + 
+				'letters and digits)',
+	password: 'Password cannot be empty',
+	email: 'Email must be of form "X@Y"',
+	dob: 'You have to be at least 18 years old, and birthday ' + 
+			'needs to be of form MM/DD/YYYY',
+	zipcode: 'Zipcode must be 5 digits'
+}
+&nbsp;
+const <span class="fstat-no" title="function not covered" >validateUsername = <span class="cstat-no" title="statement not covered" >(</span>username) =&gt; </span>
+	username &amp;&amp; username !== '' &amp;&amp; username[0].match(/([a-z]|[A-Z])/) &amp;&amp; username.match(/^\w+$/)
+&nbsp;
+const <span class="fstat-no" title="function not covered" >validatePassword = <span class="cstat-no" title="statement not covered" >(</span>password) =&gt; password &amp;&amp; password !== ''</span>
+&nbsp;
+const <span class="fstat-no" title="function not covered" >validateEmail = <span class="cstat-no" title="statement not covered" >(</span>email) =&gt; email &amp;&amp; email.match(/^[^@]+@[^@]+$/)</span>
+&nbsp;
+const <span class="fstat-no" title="function not covered" >validateBirthday = (</span>bday) =&gt; {
+<span class="cstat-no" title="statement not covered" >	if (!bday || bday.length !== 10) {</span>
+<span class="cstat-no" title="statement not covered" >		return false</span>
+	}
+	l</span>et month = <span class="cstat-no" title="statement not covered" >bday.substring(0,2)
+	l</span>et day = <span class="cstat-no" title="statement not covered" >bday.substring(3,5)
+	l</span>et year = <span class="cstat-no" title="statement not covered" >bday.substring(6,10)
+<span class="cstat-no" title="statement not covered" >	if (!month.match(/^\d{2}$/) || !day.match(/^\d{2}$/) ||</span>
+		!year.match(/^\d{4}$/) || bday[2] !== "/" || bday[5] !== "/") {
+<span class="cstat-no" title="statement not covered" >		return false</span>
+	}
+<span class="cstat-no" title="statement not covered" >	month = parseInt(month)</span>
+<span class="cstat-no" title="statement not covered" >	day = parseInt(day)</span>
+<span class="cstat-no" title="statement not covered" >	year = parseInt(year)</span>
+<span class="cstat-no" title="statement not covered" >	if (month &lt; 1 || month &gt; 12 || day &lt; 1 || day &gt; 31 || </span>
+		((month === 4 || month === 6 || month === 9 || month === 11) &amp;&amp;
+			day === 31) || (month === 2 &amp;&amp; (day === 30 || 
+				((year % 4 !== 0 || (year % 100 === 0 &amp;&amp;
+					year % 400 !== 0)) &amp;&amp; day === 29)))) {
+<span class="cstat-no" title="statement not covered" >		return false</span>
+	}
+	l</span>et today = <span class="cstat-no" title="statement not covered" >new Date()
+<span class="cstat-no" title="statement not covered" >	if (today.getFullYear() - year &lt; 18 || (today.getFullYear() - year === 18 &amp;&amp;</span>
+		(today.getMonth() + 1 &lt; month || (today.getMonth() + 1 === month &amp;&amp;
+			today.getDate() &lt; day)))) {
+<span class="cstat-no" title="statement not covered" >		return false</span>
+	}
+<span class="cstat-no" title="statement not covered" >	return true</span>
+}
+&nbsp;
+const <span class="fstat-no" title="function not covered" >validateZip = <span class="cstat-no" title="statement not covered" >(</span>zip) =&gt; zip &amp;&amp; zip.length === 5 &amp;&amp; zip.match(/^\d{5}$/)</span>
+&nbsp;
+const <span class="fstat-no" title="function not covered" >validate = (</span>type, userInfo) =&gt; {
+<span class="cstat-no" title="statement not covered" >	switch (type) {</span>
+		case 'username':
+<span class="cstat-no" title="statement not covered" >			return validateUsername(userInfo.username)</span>
+		case 'password':
+<span class="cstat-no" title="statement not covered" >			return validatePassword(userInfo.password)</span>
+		case 'email':
+<span class="cstat-no" title="statement not covered" >			return validateEmail(userInfo.email)</span>
+		case 'dob':
+<span class="cstat-no" title="statement not covered" >			return validateBirthday(userInfo.dob)</span>
+		case 'zipcode':
+<span class="cstat-no" title="statement not covered" >			return validateZip(userInfo.zipcode)</span>
+		default:
+<span class="cstat-no" title="statement not covered" >			return false</span>
+	}
+}
+&nbsp;
+export default validate</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Mar 13 2017 20:34:15 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
