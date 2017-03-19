@@ -1,0 +1,23 @@
+{
+    "plugins": [ "react", "babel", "flowtype" ],
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "rules": {
+        "strict": 0,
+    "generator-star-spacing": 1,
+    "babel/new-cap": 1,
+    "array-bracket-spacing": 1,
+    "babel/object-curly-spacing": 0,
+    "object-shorthand": 1,
+    "arrow-parens": 1,
+    "no-await-in-loop": 1,
+    "flowtype/object-type-delimiter": 1
+
+    }
+}

@@ -1,0 +1,20 @@
+
+> frontend@1.0.0 e2e:base /Users/xiaoyuchen/Documents/courses/COMP431/hw6-frontend
+> mocha --opts e2e/mocha.opts e2e/*.spec.js "--reporter" "xunit"
+
+<testsuite name="Mocha Tests" tests="14" failures="0" errors="0" skipped="0" timestamp="Sun, 19 Mar 2017 05:20:05 GMT" time="49.862">
+<testcase classname="Test article" name="should post a new article and update in the feed" time="2.81"/>
+<testcase classname="Test article" name="should filter articles" time="4.622"/>
+<testcase classname="Test article" name="should edit an article and update in the feed" time="3.342"/>
+<testcase classname="Test Authentication" name="should register a new user" time="2.782"/>
+<testcase classname="Test Authentication" name="should log in a new user" time="3.05"/>
+<testcase classname="Test Authentication" name="should log out" time="3.143"/>
+<testcase classname="Test main page" name="should update the headline and verify the change" time="2.751"/>
+<testcase classname="Test main page" name="should count the number of followed users" time="1.033"/>
+<testcase classname="Test main page" name="should follow user and verify count increases" time="3.196"/>
+<testcase classname="Test main page" name="should follow user and verify count decreases" time="3.096"/>
+<testcase classname="Test profile page" name="should update email and verify" time="2.69"/>
+<testcase classname="Test profile page" name="should update zipcode and verify" time="2.69"/>
+<testcase classname="Test profile page" name="should update email and verify not change message" time="2.685"/>
+<testcase classname="shutdown" name="now" time="0.079"/>
+</testsuite>

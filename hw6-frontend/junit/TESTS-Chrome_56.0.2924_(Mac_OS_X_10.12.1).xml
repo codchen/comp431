@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 56.0.2924 (Mac OS X 10.12.1)" package="" timestamp="2017-03-19T05:20:27" id="0" hostname="Xiaoyus-MacBook-Pro.local" tests="69" errors="0" failures="0" time="0.085">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"/>
+  </properties>
+  <testcase name="Validate actions resource should be a resource" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate actions resource should give me the http error" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate actions resource should be POSTable" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate actions should update error message" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate actions should update success message" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate actions should navigate to profile" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate actions should navigate to main" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate actions should navigate to landing" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate actions should clear message" time="0.011" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate actions should perform no operation" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate actions"/>
+  <testcase name="Validate reducer should initialize state" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate reducer"/>
+  <testcase name="Validate reducer should state success" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate reducer"/>
+  <testcase name="Validate reducer should state error" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate reducer"/>
+  <testcase name="Validate reducer should set location" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate reducer"/>
+  <testcase name="Validate Article asyncronous actions should fetch articles" time="0.002" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article asyncronous actions"/>
+  <testcase name="Validate Article asyncronous actions should post new article" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article asyncronous actions"/>
+  <testcase name="Validate Article asyncronous actions should post new article with images" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article asyncronous actions"/>
+  <testcase name="Validate Article asyncronous actions should not post empty article" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article asyncronous actions"/>
+  <testcase name="Validate Article asyncronous actions should edit articles" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article asyncronous actions"/>
+  <testcase name="Validate Article asyncronous actions should not put empty edit" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article asyncronous actions"/>
+  <testcase name="Validate Article asyncronous actions should edit comments" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article asyncronous actions"/>
+  <testcase name="Validate Article asyncronous actions should not put empty comment edit" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article asyncronous actions"/>
+  <testcase name="Validate Article asyncronous actions should fail gracefully on http error" time="0.004" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article asyncronous actions"/>
+  <testcase name="Validate Article reducer should set the articles" time="0.002" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article reducer"/>
+  <testcase name="Validate Article reducer should set the search keyword" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article reducer"/>
+  <testcase name="Validate Article reducer should set newly added article inclusively" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article reducer"/>
+  <testcase name="Validate Article reducer should update new article" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article reducer"/>
+  <testcase name="Validate Article reducer should set comments hiding/showing" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article reducer"/>
+  <testcase name="Validate Article reducer should set comments edit hiding/showing" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article reducer"/>
+  <testcase name="Validate Article synchronous actions should update search keyword" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article synchronous actions"/>
+  <testcase name="Validate Article synchronous actions should not update empty search keyword" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article synchronous actions"/>
+  <testcase name="Validate Article synchronous actions should toggle hiding comments" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article synchronous actions"/>
+  <testcase name="Validate Article synchronous actions should set hiding editing comments" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Article synchronous actions"/>
+  <testcase name="ArticlesView should render articles" time="0.014" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).ArticlesView"/>
+  <testcase name="ArticlesView should dispatch actions to create a new article" time="0.006" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).ArticlesView"/>
+  <testcase name="ArticlesView should dispatch actions to create a new article" time="0.003" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).ArticlesView"/>
+  <testcase name="Validate Authentication asyncronous actions should log in a user" time="0.005" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication asyncronous actions"/>
+  <testcase name="Validate Authentication asyncronous actions should not log in an invalid user" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication asyncronous actions"/>
+  <testcase name="Validate Authentication asyncronous actions should log out a user" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication asyncronous actions"/>
+  <testcase name="Validate Authentication asyncronous actions should register a user" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication asyncronous actions"/>
+  <testcase name="Validate Authentication asyncronous actions should not register an invalid user" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication asyncronous actions"/>
+  <testcase name="Validate Authentication asyncronous actions should fail gracefully on http error" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication asyncronous actions"/>
+  <testcase name="Validate Authentication reducer should do nothing on register" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication reducer"/>
+  <testcase name="Validate Authentication reducer should set register requested" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication reducer"/>
+  <testcase name="Validate Authentication reducer should set logged user" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication reducer"/>
+  <testcase name="Validate Authentication reducer should set login requested" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication reducer"/>
+  <testcase name="Validate Authentication reducer should set user log out" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Authentication reducer"/>
+  <testcase name="Validate Following list asyncronous actions should follow a user" time="0.005" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Following list asyncronous actions"/>
+  <testcase name="Validate Following list asyncronous actions should not follow an empty user" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Following list asyncronous actions"/>
+  <testcase name="Validate Following list asyncronous actions should unfollow a user" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Following list asyncronous actions"/>
+  <testcase name="Validate Following list asyncronous actions should fetch initial following list" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Following list asyncronous actions"/>
+  <testcase name="Validate Following list asyncronous actions should fail gracefully on http error" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Following list asyncronous actions"/>
+  <testcase name="Validate Following list reducer should set followed users" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Following list reducer"/>
+  <testcase name="Validate Following list reducer should set followed users' information" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Following list reducer"/>
+  <testcase name="Validate Headline asyncronous actions should update headline" time="0.002" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Headline asyncronous actions"/>
+  <testcase name="Validate Headline asyncronous actions should not update an empty headline" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Headline asyncronous actions"/>
+  <testcase name="Validate Headline asyncronous actions should update avatar" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Headline asyncronous actions"/>
+  <testcase name="Validate Headline asyncronous actions should get headline" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Headline asyncronous actions"/>
+  <testcase name="Validate Headline asyncronous actions should get avatar" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Headline asyncronous actions"/>
+  <testcase name="Validate Headline asyncronous actions should fail gracefully on http error" time="0.004" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Headline asyncronous actions"/>
+  <testcase name="Validate Headline reducer should set headline" time="0.002" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Headline reducer"/>
+  <testcase name="Validate Headline reducer should set avatar" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Headline reducer"/>
+  <testcase name="Validate Profile asyncronous actions should fetch the user's profile information" time="0.003" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Profile asyncronous actions"/>
+  <testcase name="Validate Profile asyncronous actions should update user's profile information" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Profile asyncronous actions"/>
+  <testcase name="Validate Profile asyncronous actions should not update invalid profile information" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Profile asyncronous actions"/>
+  <testcase name="Validate Profile asyncronous actions should fail gracefully on http error" time="0.002" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Profile asyncronous actions"/>
+  <testcase name="Validate Profile reducer should update email" time="0.001" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Profile reducer"/>
+  <testcase name="Validate Profile reducer should update zipcode" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Profile reducer"/>
+  <testcase name="Validate Profile reducer should set date of birth" time="0" classname="Chrome_56_0_2924_(Mac_OS_X_10_12_1).Validate Profile reducer"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
