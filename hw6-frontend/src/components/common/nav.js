@@ -18,7 +18,7 @@ const Navigation = ({ _id, btn1, btn2 }) => (
 )
 
 Navigation.propTypes = {
-	_id: React.PropTypes.number.isRequired,
+	_id: React.PropTypes.string.isRequired,
 	btn1: React.PropTypes.func.isRequired,
 	btn2: React.PropTypes.func.isRequired
 }

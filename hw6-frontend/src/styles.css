@@ -1,5 +1,5 @@
 .hide {
-	display: none !important;
+	display: none;
 }
 
 .btn {
@@ -13,85 +13,49 @@
 	padding-right: 3rem;
 }
 
-.nav {
-	background-color: #B7BFFF;
-	height: 9rem;
-}
-
 .file-input-label {
 	cursor: pointer;
 }
 
-.mid-column {
-	padding-top: 1rem !important;
+.ui.grid > .row > .mid-column {
+	padding-top: 1rem;
 }
 
-.left-column {
-	padding-top: 1rem !important;
-	padding-left: 3rem !important;
+.ui.grid > .row > .left-column {
+	padding-top: 1rem;
+	padding-left: 3rem;
 }
 
-.right-column {
-	padding-top: 1rem !important;
-	padding-right: 3rem !important;
-}
-
-.authenticationInput {
-	margin-left: auto !important;
-	margin-right: auto !important;
-	width: 80%;
+.ui.grid > .row > .right-column {
+	padding-top: 1rem;
+	padding-right: 3rem;
 }
 
 @media screen and (min-width: 1px) {
-  .auth-modal {
-  	text-align: center !important;
+  .ui.modal.auth-modal {
+  	text-align: center;
 	padding-bottom: 1rem;
-    width: 30rem !important;
-    margin: 0 0 0 -15rem !important;
-    top: 25% !important;
-  }
-}
-
-@media screen and (min-width: 1px) {
-  .article-modal {
-  	text-align: center !important;
-	padding-bottom: 1rem;
-    width: 40rem !important;
-    margin: 0 0 0 -20rem !important;
-    top: 25% !important;
-  }
-}
-
-.custom-modal {
-	display: none;
-    position: fixed;
-    padding-top: 20%;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.custom-modal.open {
-	display: block;
-}
-
-.custom-modal > .modal-content {
-	position: relative;
-    margin: auto;
-    padding: 0;
     width: 30rem;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 0 0 0 -15rem;
+    top: 25%;
+  }
 }
 
-.btnNav {
-	float: right !important;
-	height: 3rem !important;
-	margin-right: 2rem !important;
-	margin-top: 3rem !important;
+@media screen and (min-width: 1px) {
+  .ui.modal.article-modal {
+  	text-align: center;
+	padding-bottom: 1rem;
+    width: 40rem;
+    margin: 0 0 0 -20rem;
+    top: 25%;
+  }
+}
+
+.ui.button.btnNav {
+	float: right;
+	height: 3rem;
+	margin-right: 2rem;
+	margin-top: 3rem;
 }
 
 .nav {
