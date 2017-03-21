@@ -10,13 +10,13 @@ const Profile = () => (
 		<ProfileNavigation />
 		<div className='ui three column grid'>
 			<div className='row'>
-				<div className='four wide column left-column'>
+				<div className='left-column four wide column'>
 					<AvatarContainer />
 				</div>
-				<div className='six wide column mid-column'>
+				<div className='mid-column six wide column'>
 					<ProfileDisplayContainer />
 				</div>
-				<div className='six wide column right-column'>
+				<div className='right-column six wide column'>
 					<ProfileFormContainer />
 				</div>
 			</div>
