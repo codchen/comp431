@@ -23,7 +23,7 @@ export const SearchArticleContainer = connect(
 	null,
 	(dispatch) => ({
 		options: [
-		    { text: 'All', callback:
+		    { text: 'All Articles', callback:
 		    	() => dispatch(showAll()) },
 		    { text: 'By Text', callback:
 		    	(text) => dispatch(searchByText(text)) },
