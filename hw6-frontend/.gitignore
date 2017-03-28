@@ -1,2 +1,5 @@
 node_modules
 .eslintcache
+.git
+dist/bundle.js
+dist/bundle.js.map
