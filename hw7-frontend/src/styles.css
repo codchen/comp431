@@ -1,0 +1,137 @@
+.hide {
+	display: none;
+}
+
+.btn {
+	width: 80%;
+	margin: 0;
+}
+
+.authenticationBlock {
+	text-align: center;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.file-input-label {
+	cursor: pointer;
+}
+
+.ui.grid > .row > .mid-column {
+	padding-top: 1rem;
+}
+
+.ui.grid > .row > .left-column {
+	padding-top: 1rem;
+	padding-left: 3rem;
+}
+
+.ui.grid > .row > .right-column {
+	padding-top: 1rem;
+	padding-right: 3rem;
+}
+
+@media screen and (min-width: 1px) {
+  .ui.modal.auth-modal {
+  	text-align: center;
+	padding-bottom: 1rem;
+    width: 30rem;
+    margin: 0 0 0 -15rem;
+    top: 25%;
+  }
+}
+
+@media screen and (min-width: 1px) {
+  .ui.modal.article-modal {
+  	text-align: center;
+	padding-bottom: 1rem;
+    width: 40rem;
+    margin: 0 0 0 -20rem;
+    top: 25%;
+  }
+}
+
+.ui.button.btnNav {
+	float: right;
+	height: 3rem;
+	margin-right: 2rem;
+	margin-top: 3rem;
+}
+
+.nav {
+	background-color: #004C67;
+	box-shadow: 0 0 0.2rem black;
+	border-radius: 0.1rem;
+}
+
+.navLogo {
+	margin-top: 2rem;
+	margin-left: 4rem;
+	height: 5rem;
+	display: inline;
+	width: 15rem;
+}
+
+.landingLogo {
+	position: absolute;
+	top: 35%;
+	bottom: 10%;
+	left: 33%;
+	right: 33%;
+	transform: rotate(0deg);
+	transition: transform 2s;
+}
+
+.landingLogo:hover {
+	transform: rotate(10deg);
+}
+
+.landingBackground {
+	background-color: #74DAFF;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.notification {
+	position: fixed;
+    z-index: 1002;
+    left: 25%;
+    right: 25%;
+    color: white;
+    text-align: center;
+    width: 50rem;
+    height: 2rem;
+    font-size: 1rem;
+    overflow: hidden; 
+    box-shadow: 0 0 0.2rem black;
+    border-radius: 0.1rem;
+}
+
+.notification-enter {
+    top: -2rem;
+}
+
+.notification-enter.notification-enter-active {
+	top: 0;
+	transition: top 500ms ease-in;
+}
+
+.notification-leave {
+    top: 0rem;
+}
+
+.notification-leave.notification-leave-active {
+	top: -2rem;
+	transition: top 300ms ease-out;
+}
+
+.error {
+	background-color: red;
+}
+
+.success {
+	background-color: green;
+}

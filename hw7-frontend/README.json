@@ -1,0 +1,5 @@
+{ 
+     "netid": "xc12",
+  "frontend": "https://hw7-frontend.surge.sh",
+   "backend": "https://hw7-backend.herokuapp.com"
+}
