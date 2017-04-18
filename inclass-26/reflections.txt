@@ -1,0 +1,36 @@
+What did you hope to learn but did not?
+
+Workflow from development, staging, and final deployment
+How to use nginx/how to create a load balancer
+
+What did you really enjoy learning about?
+
+All technologies used are up to date and popular so it's not hard to find
+documentations
+
+What worked well in the course? and how?
+
+The incremental development of the final application. It'd be hard to do it
+if you just throw it as a whole at us and give us like two months to complete
+it, like some other course.
+
+What did not work well in the course and how might it be improved?
+
+Some packages used in inclass exercises are outdated and could cause great 
+confusions (e.g. used webpack 1 instead of 2, which is in many ways different)
+
+What could I have done to help you more, presentation of material, design 
+of in class exercises, goals of projects – and be specific please!
+
+Maybe have links of detailed introductions for the technologies you mentioned 
+in class, given there are so many of them and you can possibly explain them
+all by yourself
+
+Anything else you like to say?
+
+I'm not sure about this but I feel like for our project it'd make more sense
+to use a relational database. True that we are not building a banking app but 
+I feel like everything is indexed (_id, commentId, username) and we don't 
+really need so much flexibility provided by NoSQL. Relational databse is still
+around and I guess a student coming out of a web dev course is expected to know
+how to write some basic SQLs. Just a thought.
