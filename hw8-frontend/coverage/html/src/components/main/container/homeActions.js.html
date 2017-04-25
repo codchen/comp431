@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/main/container/homeActions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">src/components/main/container</a> homeActions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>47/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>28/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>33/33</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { resource } from '../../../utils/ajax'
+import { updateErrorMessage, updateSuccessMessage, noop }
+	from '../../../actions'
+&nbsp;
+export const Action = {
+	UPDATE_HEADLINE: 'UPDATE_HEADLINE',
+	UPDATE_AVATAR: 'UPDATE_AVATAR'
+}
+&nbsp;
+// Synchronous action creators
+export const updateHeadlineAction = (headline) =&gt;
+	({ type: Action.UPDATE_HEADLINE, param: headline })
+export const updateAvatarAction = (avatar) =&gt;
+	({ type: Action.UPDATE_AVATAR, param: avatar })
+&nbsp;
+// Async action creators
+export const updateHeadline = (headline) =&gt; {
+	if (headline === '') {
+		return noop()
+	}
+	return (dispatch) =&gt; putHeadline(headline)
+		.then((headline) =&gt; {
+			dispatch(updateSuccessMessage('Update headline success'))
+			dispatch(updateHeadlineAction(headline))
+		})
+		.catch((reason) =&gt;
+			dispatch(updateErrorMessage(
+				`Failed to update headline: ${reason.message}`)))
+}
+&nbsp;
+export const updateAvatar = (file) =&gt; (dispatch) =&gt;
+	putAvatar(file)
+		.then((avatar) =&gt; {
+			dispatch(updateSuccessMessage('Update avatar success'))
+			dispatch(updateAvatarAction(avatar))
+		})
+		.catch((reason) =&gt;
+			dispatch(updateErrorMessage(
+				`Failed to update avatar: ${reason.message}`)))
+&nbsp;
+export const getHeadline = () =&gt; (dispatch) =&gt;
+	fetchHeadline()
+		.then((headline) =&gt; dispatch(updateHeadlineAction(headline)))
+		.catch((reason) =&gt; dispatch(updateErrorMessage(
+			`Failed to get headline: ${reason.message}`)))
+&nbsp;
+export const getAvatar = () =&gt; (dispatch) =&gt;
+	fetchAvatar()
+		.then((avatar) =&gt; dispatch(updateAvatarAction(avatar)))
+		.catch((reason) =&gt; dispatch(updateErrorMessage(
+			`Failed to get avatar: ${reason.message}`)))
+&nbsp;
+export const setInitialHome = () =&gt; (dispatch) =&gt; {
+	dispatch(getHeadline())
+	dispatch(getAvatar())
+}
+&nbsp;
+// Async requests
+const fetchHeadline = () =&gt; resource('GET', 'headlines')
+	.then((response) =&gt; response.headlines[0].headline)
+const fetchAvatar = () =&gt; resource('GET', 'avatars')
+	.then((response) =&gt; response.avatars[0].avatar)
+const putHeadline = (headline) =&gt; resource('PUT', 'headline', { headline })
+	.then((response) =&gt; response.headline)
+const putAvatar = (file) =&gt;
+	resource('PUT', 'avatar', { message: '', file }, true)
+		.then((response) =&gt; response.avatar)</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Mar 19 2017 00:20:27 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
